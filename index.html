@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edifício Império - Documentos do Condomínio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f1724 0%, #1a2940 50%, #0f1724 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: #e8e8e8;
+        }
+
+        .container {
+            max-width: 480px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 30px 20px;
+            background: linear-gradient(145deg, #1e3a5f, #1a2f4a);
+            border-radius: 16px;
+            border: 1px solid rgba(100, 160, 230, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .building-icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+
+        .header h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .header p {
+            font-size: 0.9rem;
+            color: #8ab4e8;
+            font-weight: 400;
+        }
+
+        .docs-section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #6a9fd8;
+            margin-bottom: 14px;
+            padding-left: 4px;
+            font-weight: 600;
+        }
+
+        .doc-card {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(145deg, #1c2e45, #162438);
+            border: 1px solid rgba(100, 160, 230, 0.15);
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin-bottom: 12px;
+            text-decoration: none;
+            color: #e8e8e8;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .doc-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(100, 180, 255, 0.4);
+            box-shadow: 0 6px 20px rgba(30, 100, 200, 0.2);
+            background: linear-gradient(145deg, #223a55, #1c3248);
+        }
+
+        .doc-card:active {
+            transform: translateY(0);
+        }
+
+        .doc-icon {
+            width: 46px;
+            height: 46px;
+            min-width: 46px;
+            background: linear-gradient(135deg, #c0392b, #e74c3c);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 14px;
+            font-weight: 700;
+            font-size: 0.7rem;
+            color: white;
+            letter-spacing: 0.5px;
+        }
+
+        .doc-info {
+            flex: 1;
+        }
+
+        .doc-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 3px;
+        }
+
+        .doc-desc {
+            font-size: 0.78rem;
+            color: #7a9ec4;
+        }
+
+        .doc-arrow {
+            font-size: 1.2rem;
+            color: #4a7aaa;
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .doc-card:hover .doc-arrow {
+            transform: translateX(4px);
+            color: #6aaadd;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 16px;
+            font-size: 0.75rem;
+            color: #4a6a8a;
+            border-top: 1px solid rgba(100, 160, 230, 0.1);
+        }
+
+        .footer a {
+            color: #5a8abb;
+            text-decoration: none;
+        }
+
+        @media (max-width: 360px) {
+            .header h1 {
+                font-size: 1.3rem;
+            }
+            .doc-card {
+                padding: 14px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="building-icon">🏢</div>
+            <h1>Edifício Império</h1>
+            <p>Documentos do Condomínio</p>
+        </div>
+
+        <div class="docs-section">
+            <div class="section-title">Documentos Disponíveis</div>
+
+            <a href="docs/regimento-interno.pdf" target="_blank" class="doc-card">
+                <div class="doc-icon">PDF</div>
+                <div class="doc-info">
+                    <div class="doc-title">Regimento Interno</div>
+                    <div class="doc-desc">Normas e regras de convivência</div>
+                </div>
+                <span class="doc-arrow">›</span>
+            </a>
+
+            <a href="docs/convencao-do-condominio.pdf" target="_blank" class="doc-card">
+                <div class="doc-icon">PDF</div>
+                <div class="doc-info">
+                    <div class="doc-title">Convenção do Condomínio</div>
+                    <div class="doc-desc">Documento legal constitutivo</div>
+                </div>
+                <span class="doc-arrow">›</span>
+            </a>
+
+            <a href="docs/requerimento-de-mudanca.pdf" target="_blank" class="doc-card">
+                <div class="doc-icon">PDF</div>
+                <div class="doc-info">
+                    <div class="doc-title">Requerimento de Mudança</div>
+                    <div class="doc-desc">Formulário para agendar mudanças</div>
+                </div>
+                <span class="doc-arrow">›</span>
+            </a>
+
+            <a href="docs/autorizacao-para-obras.pdf" target="_blank" class="doc-card">
+                <div class="doc-icon">PDF</div>
+                <div class="doc-info">
+                    <div class="doc-title">Autorização para Realização de Obras</div>
+                    <div class="doc-desc">Solicitação de autorização para reformas</div>
+                </div>
+                <span class="doc-arrow">›</span>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>Contato: <a href="mailto:contato@magnabrasilcwb.com.br">contato@magnabrasilcwb.com.br</a></p>
+            <p style="margin-top:6px;">Edifício Império &copy; 2026 — Todos os direitos reservados</p>
+        </div>
+    </div>
+</body>
+</html>
